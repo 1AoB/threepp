@@ -5,7 +5,8 @@
 #include "threepp/extras/imgui/ImguiContext.hpp"
 
 #include <array>
-
+#include <iostream>
+#include <filesystem>
 
 using namespace threepp;
 
@@ -52,6 +53,14 @@ namespace {
 }// namespace
 
 int main() {
+    {
+        // 获取当前的工作目录
+        std::filesystem::path currentPath = std::filesystem::current_path();
+
+        // 输出当前工作目录
+        std::cout << "当前目录是: " << currentPath << std::endl;
+    }
+
     Canvas canvas("Audio demo");
     GLRenderer renderer(canvas.size());
 
@@ -61,7 +70,8 @@ int main() {
     camera.position.z = -5;
 
     AudioListener listener;
-    PositionalAudio audio(listener, "data/sounds/376737_Skullbeatz___Bad_Cat_Maste.mp3");
+    //PositionalAudio audio(listener, "data/sounds/376737_Skullbeatz___Bad_Cat_Maste.mp3");
+    PositionalAudio audio(listener, "../../../data/sounds/376737_Skullbeatz___Bad_Cat_Maste.mp3");
     audio.setLooping(true);
     audio.play();
 

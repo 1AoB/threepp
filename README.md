@@ -6,7 +6,26 @@
 - CMake GUI 3.30.0
 - Vs2019 Debug x64
 
-3. This repository also provides many running examples. If you encounter an error such as "0x00007FFEA634FA4C 处(位于 audio.exe 中)有未经处理的异常: Microsoft C++ 异常: std::runtime_error，位于内存位置 0x000000E87291D8F8 处。" when trying to run these examples, you can start with "it cannot find file" to solve this bug. The relative path provided in the code is not suitable for your running environment. Try replacing it with "your own relative path" or "absolute path".
+3. This repository also provides many running examples. If you encounter an error such as `"0x00007FFEA634FA4C 处(位于 audio.exe 中)有未经处理的异常: Microsoft C++ 异常: std::runtime_error，位于内存位置 0x000000E87291D8F8 处。" `when trying to run these examples, you can start with `"it cannot find file"` to solve this bug. `The relative path provided in the code is not suitable for your running environment.` Try replacing it with `"your own relative path"` or `"absolute path"`.
+
+```cpp
+If you are not sure what your current directory is, you can try outputting it:
+If your compiler supports C++17 or later, you can use the`<file system>`library:
+
+#include <iostream>
+#include <filesystem>
+
+int main() {
+    // 获取
+    std::filesystem::path currentPath = std::filesystem::current_path();
+    // 输出
+    std::cout << "当前目录是: " << currentPath << std::endl;
+
+    return 0;
+}
+```
+
+
 
 ----------------
 
