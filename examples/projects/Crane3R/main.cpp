@@ -15,6 +15,9 @@ using namespace kine;
 #include "kine/ik/CCDSolver.hpp"
 #include "threepp/extras/imgui/ImguiContext.hpp"
 
+#include <iostream>
+#include <filesystem>
+
 struct MyUI: ImguiContext {
 
     bool jointMode = true;
@@ -81,7 +84,12 @@ auto createGrid() {
 }
 
 int main() {
-
+    {
+        // 获取
+        std::filesystem::path currentPath = std::filesystem::current_path();
+        // 输出
+        std::cout << "当前目录是: " << currentPath << std::endl;
+    }
     Canvas canvas{"Crane3R", {{"size", WindowSize{1280, 720}}, {"antialiasing", 8}}};
     GLRenderer renderer{canvas.size()};
     renderer.autoClear = false;
@@ -115,7 +123,7 @@ int main() {
 
     HUD hud(canvas.size());
     FontLoader fontLoader;
-    const auto font = *fontLoader.load("data/fonts/helvetiker_regular.typeface.json");
+    const auto font = *fontLoader.load("../../../../data/fonts/helvetiker_regular.typeface.json");
 
     TextGeometry::Options opts(font, 40, 2);
     auto handle = Text2D(opts, "Loading Crane3R..");

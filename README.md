@@ -33,6 +33,20 @@ This library requires C++20. At first, I thought it needed to be set up, but in 
 
 ---------------------------------------------------------------------
 
+![image-20241209114857643](./assets/image-20241209114857643.png)
+
+![image-20241209114921818](./assets/image-20241209114921818.png)
+
+![image-20241209114945011](./assets/image-20241209114945011.png)
+
+![image-20241209115007107](./assets/image-20241209115007107.png)
+
+![image-20241209115832897](./assets/image-20241209115832897.png)
+
+
+
+---------------------
+
 ## threepp (Work in progress)
 
 Cross-platform C++20 port of the popular Javascript 3D library [three.js](https://github.com/mrdoob/three.js/) [r129](https://github.com/mrdoob/three.js/tree/r129).
