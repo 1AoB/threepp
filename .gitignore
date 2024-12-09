@@ -5,3 +5,4 @@
 build
 cmake-build-*
 compile_commands.json
+MyBuildLib/
