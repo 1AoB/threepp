@@ -10,6 +10,10 @@
 
 ----------------
 
+This library requires C++20. At first, I thought it needed to be set up, but in fact, it doesn't need it at all. After cmake, it automatically supports C++20.
+
+---------------------------------------------------------------------
+
 ## threepp (Work in progress)
 
 Cross-platform C++20 port of the popular Javascript 3D library [three.js](https://github.com/mrdoob/three.js/) [r129](https://github.com/mrdoob/three.js/tree/r129).
